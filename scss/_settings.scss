@@ -1,0 +1,36 @@
+@mixin flex($direct:'row', $jc:'start', $ai:'start') {
+    display: flex;
+    flex-direction: #{$direct};
+    justify-content: #{$jc};
+    align-items: #{$ai};
+}
+
+@mixin adaptProp($property: '', $contMaxWidth: 1920, $startSize: 0, $endSize: 0) {
+    #{$property}: calc(#{$endSize}px + (#{$startSize} - #{$endSize}) * ((100vw - 320px) / (#{$contMaxWidth} - 320)));
+}
+
+._hidden
+{
+    display: none !important;
+}
+
+.button
+{
+    @include flex($jc:'center', $ai:'center');
+    cursor: pointer;
+}
+
+.button-span
+{
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+.content-block
+{
+    @include adaptProp('margin-top', $startSize:80, $endSize:55);
+    width: 100%;
+}
