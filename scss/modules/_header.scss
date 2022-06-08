@@ -1,0 +1,126 @@
+.header
+{
+    padding: 15px 40px;
+    width: 100%;
+    @include flex($jc:'space-between', $ai:'center');
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+
+	&__logo
+    {
+
+        &__logo-img
+        {
+    
+        }
+    }
+	&__navigation
+    {
+        display: flex;
+    }
+	&__contacts
+    {
+
+    }
+}
+.header-logo
+{
+
+}
+.header-navigation
+{
+    &__link
+    {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #333333;
+        position: relative;
+        transition: transform .35s ease;
+
+        &:not(:last-child)
+        {
+            margin-right: 44px;
+        }
+        &:not(.dropdown-menu-link):hover
+        {
+            transform: translateY(-1px);
+        }
+        &:not(.dropdown-menu-link)::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.5px;
+            background-color: #333333;
+            top: 100%;
+            left: 0;
+            pointer-events: none;
+            transform-origin: 50% 100%;
+            transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+            clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+        }
+        
+        &:hover::before {
+            transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+            clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+        }
+    }
+}
+.dropdown-menu-link
+{
+    // Появление подменю
+}
+.scroll-link
+{
+
+}
+.special-link
+{
+    color: #22577A;
+
+    &::before {
+        background-color: #22577A;
+    }
+}
+.header-contacts
+{
+    @include flex($ai:'center');
+
+    &__tel
+    {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        color: #38A3A5;
+        margin-right: 15px;
+        transition: color .35s ease;
+
+        &:hover
+        {
+            color: #22577A;
+        }
+    }
+	&__button
+    {
+        background-color: #57CC99;
+        box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.02), 0px 3px 2px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        transition: background-color .35s ease, transform .12s ease;
+        color: #FFFFFF;
+
+        &:hover
+        {
+            background-color: #36b37d;
+        }
+        &:active
+        {
+            transform: translateY(1.5px);
+        }
+    }
+}
