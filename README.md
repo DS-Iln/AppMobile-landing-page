@@ -1,2 +1,2 @@
-# AppMobile anding page
+# AppMobile landing page
  
