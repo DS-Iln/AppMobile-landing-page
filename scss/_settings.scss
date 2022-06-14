@@ -10,10 +10,6 @@
 }
 
 // Global classes
-._hidden
-{
-    display: none !important;
-}
 .button
 {
     @include flex($jc:'center', $ai:'center');
@@ -30,6 +26,6 @@
 }
 .content-block
 {
-    @include adaptProp('margin-top', $startSize:80, $endSize:40);
+    margin-top: 80px;
     width: 100%;
 }
