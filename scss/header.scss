@@ -102,12 +102,12 @@
     // Submenu appearance
     &--deployed &__submenu
     {
-        animation: submenu-appearing .35s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        animation: submenu-appearing .45s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
     // Submenu disappearance
     &--collapsed &__submenu
     {
-        animation: submenu-disappearing .35s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        animation: submenu-disappearing .45s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
 }
 .scroll-link
@@ -129,6 +129,7 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 19px;
+        letter-spacing: 0.02em;
         color: #38A3A5;
         margin-right: 15px;
         transition: color .35s ease;
@@ -147,6 +148,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+        letter-spacing: 0.02em;
         transition: background-color .35s ease, transform .12s ease;
         color: #FFFFFF;
 
@@ -160,7 +162,6 @@
         }
     }
 }
-
 
 @keyframes submenu-appearing {
     0% {

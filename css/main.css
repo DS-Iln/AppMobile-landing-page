@@ -1,0 +1,19 @@
+.main {
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start; }
+
+.content-block {
+  margin-top: 80px;
+  width: 100%; }
+
+.content-block-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  color: #57CC99; }
+/*# sourceMappingURL=main.css.map */
