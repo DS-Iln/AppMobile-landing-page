@@ -1,1 +1,69 @@
 @import "settings";
+
+.benefits
+{
+    @include flex('column');
+
+	&__main-title
+    {
+        margin: 0 0 40px 0;
+    }
+	&__company-benefits
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
+        grid-template-rows: repeat(auto-fit, minmax(auto, 292px));
+        grid-gap: 30px;
+    }
+}
+.company-benefits
+{
+	&__benefit
+    {
+        @include flex('column');
+        border-radius: 7px;
+        box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.2);
+
+        &:nth-child(odd)
+        {
+            background: url('../img/benefits-bg1.svg') no-repeat;
+        }
+        &:nth-child(even)
+        {
+            background: url('../img/benefits-bg2.svg') no-repeat;
+        }
+    }
+}
+.benefit-body
+{
+	&__benefit-heading
+    {
+        @include flex($ai:'center');
+        margin: 20px 0 47px 20px;
+    }
+	&__article
+    {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        margin: 0 10px;
+    }
+}
+.benefit-heading
+{
+	&__icon
+    {
+        width: 55px;
+        height: 55px;
+        margin: 0 20px 0 0;
+    }
+	&__title
+    {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF; 
+    }
+}

@@ -14,7 +14,7 @@ body
 {
     width: 100%;
     max-width: 1340px;
-    height: 100%;
+    min-height: 100%;
     margin: 0 auto;
     @include flex('column');
     background-color: #fff;
@@ -25,7 +25,7 @@ body
     right: 50px;
     bottom: 40px;
 }
-// Global classes
+// Global classes & styles
 .button
 {
     @include flex($jc:'center', $ai:'center');
@@ -40,6 +40,10 @@ body
     color: inherit;
     flex: 0 0 auto;
 }
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Raleway', sans-serif;
+}
 // Data attributes for comfortable management through JS
 [data-visible="false"]
 {
@@ -47,7 +51,7 @@ body
 }
 [data-visible="true"]
 {
-    display: none;
+    display: block;
 }
 [data-visible="flex"]
 {

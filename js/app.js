@@ -1,13 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
-    // top-of-site-link //
-    document.querySelector('.go-to-top-link').addEventListener('click', function(e) {
+    // Top-of-site-link //
+    const topLink = document.querySelector('.go-to-top-link');
+    topLink.addEventListener('click', function(e) {
         e.preventDefault();
+        // Scroll to header
         document.querySelector('.header').scrollIntoView({
             behavior: 'smooth'
         });
     });
+    const mainScreenBottom = document.querySelector('.main-screen').getBoundingClientRect().bottom;
+    // Hide & show top-of-site-link
     document.body.addEventListener('scroll', () => {
-        // After scrolling mainscreen block show link
+        if (document.body.scrollTop >= mainScreenBottom) {
+            topLink.dataset.visible = 'true'; 
+        } else {
+            topLink.dataset.visible = 'false'; 
+        }
     });
 
     // Header drop-down-menu link animation
@@ -47,6 +55,5 @@ window.addEventListener('DOMContentLoaded', () => {
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.href = 'css/animations.css';
-
     document.body.append(link);
 });
