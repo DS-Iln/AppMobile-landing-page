@@ -26,9 +26,6 @@
   letter-spacing: 0.04em;
   margin-bottom: 10px; }
 
-.company__main-title {
-  margin-bottom: 40px; }
-
 .company__article {
   font-size: 20px;
   line-height: 40px;
@@ -54,15 +51,7 @@
 
 .mainscreen-gallery__gallery-item {
   border-radius: 10px;
-  overflow: hidden;
-  position: relative; }
-
-.gallery-item__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+  overflow: hidden; }
 
 .gallery-item__overlay {
   position: absolute;

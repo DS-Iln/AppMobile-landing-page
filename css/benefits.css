@@ -3,13 +3,10 @@
   flex-direction: column;
   justify-content: start;
   align-items: start; }
-  .benefits__main-title {
-    margin: 0 0 40px 0; }
   .benefits__company-benefits {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
-    grid-template-rows: repeat(auto-fit, minmax(auto, 292px));
     grid-gap: 30px; }
 
 .company-benefits__benefit {
@@ -18,7 +15,9 @@
   justify-content: start;
   align-items: start;
   border-radius: 7px;
-  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  max-height: 292px; }
   .company-benefits__benefit:nth-child(odd) {
     background: url("../img/benefits-bg1.svg") no-repeat; }
   .company-benefits__benefit:nth-child(even) {
